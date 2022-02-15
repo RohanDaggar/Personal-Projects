@@ -1,3 +1,5 @@
+from wordle_functions import load_words
+
 def load_words_old( ): # used an old list of all english words rather than a specific 5 letter word list
     #this function returns the wordleWordList file to a list of words
     wordlist =[]
@@ -12,10 +14,6 @@ def load_words_old( ): # used an old list of all english words rather than a spe
     print (len(wordlist), "words loaded." )
     return wordlist
 
-
-def load_words():
-    with open('wordle/wordleWordList', 'r') as f:
-        pass
 
 def Search(wordlist,search,bannedletters):
     #this fuction searches a list of strings and returns a list of strings that contain the search key
