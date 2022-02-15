@@ -2,7 +2,7 @@ def load_words( ):
     #this function returns a list of words in bombparty
     wordlist =[]
     print ("Loading word list from file...")
-    inFile = open ('C:\\Users\\dagzt\\OneDrive\\Documents\\bombParty.txt', 'r')  #the file was used for a bombparty script q.q
+    inFile = open ('wordleWordList.txt', 'r')  #the file was used for a bombparty script q.q
     myline = inFile.readline()
     while myline:
         #print(myline[:-1]) #this :-1 is needed to remove the \n
