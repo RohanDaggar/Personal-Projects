@@ -1,0 +1,3 @@
+Update class structures
+perhaps a class for a guess, defined before or after checking it against the actual work?
+wordle wasnt built in a day
