@@ -1,6 +1,6 @@
 def load_words():
     with open('wordle/wordleWordList.txt', 'r') as f:
-        words = [word[:-1] for word in f]
+        words = [word[:5] for word in f]
     return words
 
 
