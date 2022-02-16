@@ -4,7 +4,7 @@ def load_words():
     return words
 
 
-
-wordList = load_words()
-print(wordList[:10])
-print(len(wordList))
+if __name__ == "__main__":
+    wordList = load_words()
+    print(wordList[:10])
+    print(len(wordList))
