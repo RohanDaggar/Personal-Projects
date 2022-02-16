@@ -18,9 +18,36 @@ def take_input(list_of_words):
         return take_input(list_of_words)
     return guess.lower()
 
+
 def check_word(guess, actual):
+    gy = [0,0,0,0,0]
+    checked_letters = []
+    greened_letters= []
+    
+    actual_info = dict() #this is a count of all the letters in the guess
+    actual_letters = {letter for letter in actual} #list of all letters in the actual word, non repeating
+    for letter in actual_letters:
+        actual_info.update({letter: actual.count(letter)})
+    print(actual_info)
+    newdict = {letter:actual.count(letter) for letter in actual_letters}
+    print(newdict)
+    
+    
     for i in range(5):
-        print(i)
+        if guess[i] == actual[i]:
+            gy[i] = 'g' 
+            greened_letters.append(guess[i])
+    
+    for i in range(5):
+        if gy[i] == 'g':
+            continue
+        if guess[i] in actual:
+            gy[i] = 'y'
+    
+    
+    
+    return gy
+
 
 if __name__ == "__main__":
     wordList = load_words()
@@ -29,5 +56,5 @@ if __name__ == "__main__":
     
     #guess = take_input(wordList)
     #print(guess)
-    
-    check_word("hello", "arose")
+    print("12345"[-4:])
+    print(check_word("aallo", "goose"))
