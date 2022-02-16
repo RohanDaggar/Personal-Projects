@@ -67,26 +67,30 @@ def listCutDown(wordList):
             newwords.append(word)
     return newwords
 
-words = load_words()
-while True:
-    wordsearch, notletters = take_inputs()
-    correctWordList = Search(words, wordsearch, notletters)
-    #print(correctWordList)
-    refinedWordList = listCutDown(correctWordList)
-    if len(refinedWordList) == 1:
-        #special case for when theres only one option
-        print("CONGRATULATIONS !!!! THE WORD YOURE LOOKING FOR IS.........")
-        from time import sleep
-        sleep(1)
-        print('.')
-        sleep(1)
-        print('.')
-        sleep(1)
-        print('.')
-        sleep(2)
-        print(refinedWordList[0]+"!!!!!!!!!!!!!!!111")
-    else:
-        print("refined list is: ",refinedWordList)
-    #for letter in "Hello World":
-    #    if letter not in "elor":
-    #        print(letter)
+def run():
+    words = load_words()
+    for i in [1,2,3,4,5,6]:
+        wordsearch, notletters = take_inputs()
+        correctWordList = Search(words, wordsearch, notletters)
+        #print(correctWordList)
+        refinedWordList = listCutDown(correctWordList)
+        if len(refinedWordList) == 1:
+            #special case for when theres only one option
+            print("CONGRATULATIONS !!!! THE WORD YOURE LOOKING FOR IS.........")
+            from time import sleep
+            sleep(1)
+            print('.')
+            sleep(1)
+            print('.')
+            sleep(1)
+            print('.')
+            sleep(2)
+            print(refinedWordList[0]+"!!!!!!!!!!!!!!!111")
+        else:
+            print("refined list is: ",refinedWordList)
+        #for letter in "Hello World":
+        #    if letter not in "elor":
+        #        print(letter)
+
+if __name__ == "__main__":
+    run()
