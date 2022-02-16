@@ -24,13 +24,8 @@ def check_word(guess, actual):
     checked_letters = []
     greened_letters= []
     
-    actual_info = dict() #this is a count of all the letters in the guess
     actual_letters = {letter for letter in actual} #list of all letters in the actual word, non repeating
-    for letter in actual_letters:
-        actual_info.update({letter: actual.count(letter)})
-    print(actual_info)
-    newdict = {letter:actual.count(letter) for letter in actual_letters}
-    print(newdict)
+    newdict = {letter:actual.count(letter) for letter in actual_letters}  #this is a count of all the letters in the guess
     
     
     for i in range(5):
