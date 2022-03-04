@@ -4,7 +4,7 @@ def load_words_old( ): # used an old list of all english words rather than a spe
     #this function returns the wordleWordList file to a list of words
     wordlist =[]
     print ("Loading word list from file...")
-    inFile = open ('wordle/wordleWordList.txt', 'r')
+    inFile = open ('./wordleWordList.txt', 'r')
     myline = inFile.readline()
     while myline:
         #print(myline[:-1]) #this :-1 is needed to remove the \n
