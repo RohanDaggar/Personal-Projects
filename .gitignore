@@ -3,5 +3,4 @@
 __pycache__/
 test.py
 text.txt
-
-.MyApp/
+MyApp/
